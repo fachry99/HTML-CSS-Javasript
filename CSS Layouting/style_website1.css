@@ -1,0 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*start*/
+body{
+    font: 16px/28px arial, sans-serif;
+    background-color: lightgray;
+	background-image: url(image/gr.jpg);
+}
+
+.topbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background-color: grey;
+	border-bottom: 3px dashed black;
+	z-index: 999;
+}
+.container{
+    width: 960px;
+    margin: 80px auto;
+	background-color: white;
+	position: relative;
+}
+
+.twitter{
+	width: 130px;
+	height: 130px;
+	background-image:url(image/twitter1.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+	position: absolute;
+	top: -16px;
+	right: -18px;
+}
+.header{
+	padding: 20px;
+	padding-bottom: 10px;
+}
+
+.header .judul{
+    font-size: 40px;
+    font-weight: bold;
+}
+.header ul li {
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+.header a {
+	text-decoration: none;
+	color: black;
+	padding: 3px;
+}
+
+.header a:hover{
+	color: orange;
+}
+.hero {
+	height: 320px;
+	background-image: url(image/jakarta.jpg);
+	background-size: cover;
+	background-position: 0 -220px;
+}
+
+.main{
+	width: 600px;
+	padding: 20px;
+	box-sizing: border-box;
+	float: left;
+}
+
+.main h2{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.main .penulis{
+	font-size: 11px;
+	margin-top: -5px;
+	border-bottom: 3px solid black;
+}
+.main .penulis a{
+	text-decoration: none;
+	color: orange;
+}
+
+.main p{
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.sidebar{
+	width: 300px;
+	float: right;
+	padding: 20px;
+}
+
+.sidebar h3{
+	font-weight: bold;
+	color: grey;
+}
+
+.sidebar img{
+	width: 70px;
+	height: 70px;
+	float: left;
+	padding-right: 5px;
+}
+
+.sidebar p{
+	font: 12px/18px arial;
+}
+
+.sidebar ul li {
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.sidebar a{
+	text-decoration: none;
+	color: black;
+	padding: 3px;
+}
+
+.sidebar a:hover{color: orange;}
+
+.footer{
+	background-color: grey;
+	padding: 10px;
+}
+.footer .copy{
+	font-size: 12px;
+	text-align: center;
+	color: whitesmoke;
+}
+
+
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

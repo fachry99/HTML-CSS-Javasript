@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display Pada CSS</title>
+        <style>
+        /* pada display ada 3 element: inline, block, inline-block(buat custom ukuran sendiri)*/
+        /*contoh perintah inline-block => output panjang dan lebar block akan 200px
+        .navigasi a {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }*/
+        .navigasi{background-color: aqua;}
+
+        .main span{background-color: lightblue;}
+        
+        .img {width: 50px; height: 50px;}
+
+        </style>
+        <body>
+            <!-- div dan span berguna untuk mengelompokan tag saja, agar lebih tersusun rapih.-->
+            <div class="header">
+                <h1>Materi Pertama Tentang CSS layouting</h1>
+            </div>
+
+            <div class="navigasi">
+                <h2>Daftar Navigasi</h2>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 4</a>
+            </div>
+
+           <div class="main">
+            <h2>Judul Artikel</h2>
+            <img src="Laskar_pelangi.jpg">
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas saepe, modi a eveniet cum dolorem. Excepturi enim aliquid impedit expedita perferendis. Temporibus id vel veritatis enim tempore cupiditate explicabo.</p>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>tandain tulisan ini</span> animi neque dicta itaque labore quas quod, nemo eveniet obcaecati, eaque mollitia excepturi minima laudantium eligendi ut. Ducimus libero veritatis voluptatem.</p>
+           </div>
+
+           <div class="copyright">
+            <p>copyright 2023. Fachry</p>
+           </div>
+        
+        </body>
+    </head>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buat form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form, header{
+           width: 600px;
+           padding: 20px; 
+        }
+        header{
+            font-style: italic;
+        }
+        form div{
+            margin: 10px;
+        }
+
+        label{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Diri</h1>
+        <caption>ini merupakan tempat anda menyimpan data anda</caption>
+    </header>
+     <form action="" method="post" autocomplete="off">
+        <div>
+            <label for="nama">Masukan Nama: </label>
+            <input type="text" name="nama" id="nama" autofocus required minlength="2">
+        </div>
+
+        <div>
+            <label for="email">Masukan email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div>
+            <label for="nohp">Masukan No HP: </label>
+            <input type="tel" name="nohp" id="nohp">
+        </div>
+        
+        <div>
+            <label for="sosmed">Masukan URL Sosmed: </label>
+            <input type="url" name="sosmed" id="sosmed">
+        </div>
+
+        <div>
+            <label for="angka">Masukan Umur: </label>
+            <input type="number" name="angka" id="angka" min="17" max="100">
+        </div>
+
+        <div>
+            <label for="slider">Masukan slider: </label>
+            <span class="awal"></span>
+            <input type="range" name="slider" id="slider" min="0" max="100" step="5">
+            <span class="akhir"></span>
+        </div>
+
+        <div>
+            <label for="tanggal">Masukan tanggal: </label>
+            <input type="date" name="tanggal" id="tanggal">
+        </div>
+
+        <div>
+            <label for="warna">Masukan Warna Favorite anda: </label>
+            <input type="color" name="warna" id="warna">
+            <span class="hexa"></span>
+        </div>
+
+        <div>
+            <button type="submit">krim</button>
+        </div>
+     </form>
+
+<script>
+    const slider = document.querySelector("#slider");
+    const awal = document.querySelector(".awal");
+    const akhir = document.querySelector(".akhir");
+
+    awal.innerHTML = slider.min;
+    akhir.innerHTML = slider.value;
+    slider.addEventListener('input', function(){
+        akhir.innerHTML = slider.value;
+    });
+
+    const warna = document.querySelector("#warna");
+    const hexa = document.querySelector(".hexa");
+
+    hexa.innerHTML = warna.value;
+    warna.addEventListener('input', function(){
+        hexa.innerHTML = warna.value;
+        hexa.style.color = warna.value;
+    });
+
+</script>
+</body>
+</html>

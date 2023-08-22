@@ -1,0 +1,62 @@
+/* buat text wrapping
+.container{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+img{
+    float: left;
+    margin: 5px;
+}*/
+
+/* buat image galery
+.container{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+.kotak{
+    width: 80px;
+    height: 80px;
+    background-color: burlywood;
+    color: aliceblue;
+    text-align: center;
+    /*bikin ukuran line-height = height biar tulisan center ditengah
+    line-height: 80px;
+    font-size: 30px;
+    margin: 2px;
+    float: left;
+}*/
+
+/*buat multi column layout
+.container{
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.kiri{
+    width: 150px;
+    height: 500px;
+    background-color: aqua;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.tengah{
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    float: left;
+}
+
+.kanan{
+    width: 150px;
+    height: 500px;
+    background-color: brown;
+    float: left;
+}*/

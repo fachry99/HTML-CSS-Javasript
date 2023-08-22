@@ -1,0 +1,20 @@
+img: box model.png;
+CSS box terdiri dari: Margin, border, padding, content 
+
+margin: area transparan diluar border
+note: margin punya nilai auto dan negatif
+
+
+padding: area transparan di antara content dan border
+note: padding tidak punya nilai auto dan negatif, padding bisa mempengaruhi ukuran box jadi cek lagi kalo abis buat padding
+
+border: bata disekeliling content dan padding
+note: border juga dapat menambah ukuran kotak walau 1px
+/*ke 4 sisi padding berukuran 50px*/
+padding: 50px;
+/* 5px: lebar, solid: style, Black: warna*/
+border: 5px solid black;
+
+sekarang di css3 ada properti yang namanya boz-sizing jadi kita ngga perlu ngatur ukuran lagi kalo nambah padding, border, margin
+
+content: isi konten bisa text atau gambar
