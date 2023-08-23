@@ -39,5 +39,15 @@ const perkenalan = ['Halo', 'nama', 'saya', 'Rizky'];
 // console.log(tinggal);
 
 //*Assignment tanpa deklarasi object = harus ada dalam kurung
-({ nama, umur, tinggal } = {nama: 'Rizky', umur: 20, tinggal: "Jakarta"});
-console.log(nama);
+// ({ nama, umur, tinggal } = {nama: 'Rizky', umur: 20, tinggal: "Jakarta"});
+// console.log(nama);
+
+//*Assign ke variable baru
+const mhs = {
+    nama: 'Rizky',
+    umur: 20,
+    tinggal: "Jakarta"
+}
+
+const {nama: n, umur: u, tinggal} = mhs;
+console.log(n);
