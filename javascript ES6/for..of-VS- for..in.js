@@ -21,12 +21,16 @@
 //     console.log(s);
 // }
 
-const mhs = ['Sandhika', 'Doddy', 'Erik'];
+// const mhs = ['Sandhika', 'Doddy', 'Erik'];
 //mhs.forEach((m, i) => console.log(`${m} adalah mahasiswa ke-${i + 1}`));
 
 //for of tidak bisa mengambil index, jadi harus menggunakan method entries agar bisa mengambil index
-for (const[i, m]of mhs.entries()) {
-    console.log(`${m} adalah mahasiswa ke-${i + 1}`);
-}
+// for (const[i, m]of mhs.entries()) {
+//     console.log(`${m} adalah mahasiswa ke-${i + 1}`);
+// }
 
 //* Node list
+const liNama = document.querySelectorAll('.nama');
+console.log(liNama);
+
+liNama.forEach(n => console.log(n.textContent));
