@@ -43,11 +43,46 @@ const perkenalan = ['Halo', 'nama', 'saya', 'Rizky'];
 // console.log(nama);
 
 //*Assign ke variable baru
+// const mhs = {
+//     nama: 'Rizky',
+//     umur: 20,
+//     tinggal: "Jakarta"
+// }
+
+// const {nama: n, umur: u, tinggal} = mhs;
+// console.log(n);
+
+//*memberikan default value
+// const mhs = {
+//     nama: 'Rizky',
+//     umur: 20,
+//     tinggal: "Jakarta"
+// }
+
+// const {nama: n, umur: u, tinggal: t, email: e = 'email@default.com'} = mhs;
+// console.log(e);
+
+//*rest parameter
+// const mhs = {
+//     nama: 'Rizky',
+//     umur: 20,
+//     tinggal: "Jakarta"
+// }
+
+// const {nama: n, ...value} = mhs;
+// console.log(n);
+// console.log(value);
+
+//*mengambil field pada object, setelah dikirim sebagai parameter untuk function
 const mhs = {
+    id: 123,
     nama: 'Rizky',
     umur: 20,
     tinggal: "Jakarta"
 }
 
-const {nama: n, umur: u, tinggal} = mhs;
-console.log(n);
+function getIdMhs({id}) {
+    return id;
+}
+
+console.log(getIdMhs(mhs));
