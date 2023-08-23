@@ -31,11 +31,16 @@
 const mhs1 = {
     nama: "Riki Widiantoro",
     umur: 23,
-    email: "riki@gmail.com"
+    email: "riki@gmail.com",
+    nilai: {
+        tugas: 80,  //? nilai.tugas
+        uts: 85,    //? nilai.uts
+        uas: 75     //? nilai.uas
+    }
 }
 
-function cetakMhs({ nama, umur, email }) {
-    return `Halo, nama saya ${nama}, saya berumur ${umur} tahun, email saya adalah ${email}`;
+function cetakMhs({ nama, umur, email, nilai: { tugas, uts, uas } }) {
+    return `Halo, nama saya ${nama}, saya berumur ${umur} tahun, email saya adalah ${email}, nilai ujian saya adalah UTS: ${uts} dan UAS: ${uas}`;
 }
 
 console.log(cetakMhs(mhs1));
