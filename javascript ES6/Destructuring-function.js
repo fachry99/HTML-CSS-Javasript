@@ -1,4 +1,4 @@
-// Destructuring function
+//*Destructuring function
 
 // function operator(a, b) {
 //   return [a + b, a - b, a * b, a / b];
@@ -27,7 +27,7 @@
 // const { kali, bagi, tambah, kurang } = newOperator(2, 3); //? cara destructuring
 // console.log(kali + " " + bagi + " " + tambah + " " + kurang);
 
-// destructuring function arguments
+//* destructuring function arguments
 const mhs1 = {
     nama: "Riki Widiantoro",
     umur: 23,
