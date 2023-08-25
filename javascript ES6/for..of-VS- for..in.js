@@ -35,6 +35,54 @@
 
 // liNama.forEach(n => console.log(n.textContent));
 
-for (n of liNama) {
-    console.log(n.innerHTML);
-}
+// for (n of liNama) {
+//     console.log(n.innerHTML);
+// }
+
+//* arguments
+// function jumlahkanAngka() {
+    // return arguments.reduce((a, i) => a + i); //? arguments tidak bisa menggunakan method reduce
+    //? arguments tidak bisa menggunakan method map, filter, dan reduce
+    //arguments.forEach(a => jumlah += a); //? arguments juga tidak bisa menggunakan method forEach
+//     let jumlah = 0;
+//     for (a of arguments) {
+//         jumlah += a;
+//     }
+//     return jumlah;
+// } 
+
+// console.log(jumlahkanAngka(1, 2, 3, 4, 5));
+
+//* for..in
+// const mhs = {
+//     nama: 'Sandhika',
+//     umur: 33,
+//     email: 'sandhikagalih@.gmail.com'
+// }
+
+// for (m in mhs) {
+//     console.log(mhs[m]); //? mhs[m] untuk mengambil value
+// }
+
+//* for..in bisa digunakan untuk mengambil index pada array
+// const mhs = ['Sandhika', 'Doddy', 'Erik'];
+
+// for (m in mhs) {
+//     console.log(mhs[m]); //? mhs[m] untuk mengambil value
+// }
+
+//* for..in bisa digunakan untuk mengambil index pada string
+// const nama = 'Sandhika';
+
+// for (n in nama) {
+//     console.log(nama[n]); //? nama[n] untuk mengambil value
+// }
+
+//* for..in bisa digunakan untuk mengambil index pada nodelist
+// const liNama = document.querySelectorAll('.nama');
+
+// for (n in liNama) {
+//     console.log(liNama[n].textContent);
+// }
+
+
