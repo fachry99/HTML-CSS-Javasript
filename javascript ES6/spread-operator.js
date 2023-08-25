@@ -22,12 +22,18 @@
 // mhs1[0] = "Aji";
 // console.log(mhs1);
 
-const liMhs = document.querySelectorAll("li");
+//const liMhs = document.querySelectorAll("li");
 // const mhs = [];
 // for (let i =0; i < liMhs.length; i++) {
 //     mhs.push(liMhs[i].textContent);
 // }
 // console.log(mhs);
 
-const mhs =[...liMhs].map((m) => m.textContent);
+//const mhs =[...liMhs].map((m) => m.textContent);
 
+const nama = document.querySelector(".nama");
+
+const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('');
+
+console.log(huruf);
+nama.innerHTML = huruf;
