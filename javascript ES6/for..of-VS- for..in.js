@@ -15,7 +15,7 @@
 //     console.log(m);
 // }       
 
-//? versi string
+//? for of versi string
 // const nama =  'Sandhika';
 // for (const s of nama) {
 //     console.log(s);
@@ -30,7 +30,11 @@
 // }
 
 //* Node list
-const liNama = document.querySelectorAll('.nama');
-console.log(liNama);
+// const liNama = document.querySelectorAll('.nama');
+// console.log(liNama);
 
-liNama.forEach(n => console.log(n.textContent));
+// liNama.forEach(n => console.log(n.textContent));
+
+for (n of liNama) {
+    console.log(n.innerHTML);
+}
