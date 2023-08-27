@@ -1,0 +1,19 @@
+[{
+    "id": 1,
+    "name": "John",
+    "age": 30,
+    "email": "John@gmail.com",
+    "jurusan": "Information Technology"
+}, {
+    "id": 2,
+    "name": "Jane",
+    "age": 25,
+    "email": "Jane@gmail.com",
+    "jurusan": "Information Technology"
+}, {
+    "id": 3,
+    "name": "Jim",
+    "age": 40,
+    "email": "Jim@gmail.com",
+    "jurusan": "Information Technology"
+}]
