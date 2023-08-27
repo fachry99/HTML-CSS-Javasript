@@ -1,19 +1,19 @@
 [{
     "id": 1,
-    "name": "John",
-    "age": 21,
+    "nama": "John",
+    "umur": 21,
     "email": "John@gmail.com",
     "jurusan": "Information Technology"
 }, {
     "id": 2,
-    "name": "Jane",
-    "age": 25,
+    "nama": "Jane",
+    "umur": 25,
     "email": "Jane@gmail.com",
     "jurusan": "Information Technology"
 }, {
     "id": 3,
-    "name": "Jim",
-    "age": 20,
+    "nama": "Jim",
+    "umur": 20,
     "email": "Jim@gmail.com",
     "jurusan": "Information Technology"
 }]
