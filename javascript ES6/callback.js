@@ -12,7 +12,7 @@
 // tampilkanPesan(nama => alert(`halo, ${nama}`));
 
 // Asynchronous Callback
-// const mhs = [
+//const mhs = [
 //   {
 //     nama: "Sandhika Galih",
 //     nrp: "043040023",
@@ -34,7 +34,7 @@
 //     jurusan: "Teknik Informatika",
 //     idDosenWali: 3,
 //   },
-// ];
+//];
 
 // console.log("mulai");
 // mhs.forEach(a => console.log(a.nama));

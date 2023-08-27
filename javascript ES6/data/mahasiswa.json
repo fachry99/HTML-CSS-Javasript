@@ -1,7 +1,7 @@
 [{
     "id": 1,
     "name": "John",
-    "age": 30,
+    "age": 21,
     "email": "John@gmail.com",
     "jurusan": "Information Technology"
 }, {
@@ -13,7 +13,7 @@
 }, {
     "id": 3,
     "name": "Jim",
-    "age": 40,
+    "age": 20,
     "email": "Jim@gmail.com",
     "jurusan": "Information Technology"
 }]
