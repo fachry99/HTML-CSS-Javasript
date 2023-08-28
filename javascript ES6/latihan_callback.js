@@ -1,3 +1,4 @@
+//* versi jquery
 // $(".search-button").on("click", function () {
 //     $.ajax({
 //         url: 'http://www.omdbapi.com/?apikey=44b99a43&s=' + $('.input-keyword').val(),
@@ -31,7 +32,9 @@
 
 // });
 
-// versi fetch
+
+
+//* versi javascript
 const searchButton = document.querySelector('.search-button');
 searchButton.addEventListener('click', function () {
     const inputKeyword = document.querySelector('.input-keyword'); 
