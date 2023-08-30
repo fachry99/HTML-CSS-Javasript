@@ -35,36 +35,83 @@
 
 
 //* versi javascript
-const searchButton = document.querySelector('.search-button');
-searchButton.addEventListener('click', function () {
-    const inputKeyword = document.querySelector('.input-keyword'); 
-    fetch('http://www.omdbapi.com/?apikey=44b99a43&s=' + inputKeyword.value)
-        .then(response => response.json())
-        .then(response => {
-            const movies = response.Search;
-            let cards = '';
-            movies.forEach(m => cards += showCards(m));
-            const movieContainer = document.querySelector('.movie-container');
-            movieContainer.innerHTML = cards;
+// const searchButton = document.querySelector('.search-button');
+// searchButton.addEventListener('click', function () {
+//     const inputKeyword = document.querySelector('.input-keyword'); 
+//     fetch('http://www.omdbapi.com/?apikey=44b99a43&s=' + inputKeyword.value)
+//         .then(response => response.json())
+//         .then(response => {
+//             const movies = response.Search;
+//             let cards = '';
+//             movies.forEach(m => cards += showCards(m));
+//             const movieContainer = document.querySelector('.movie-container');
+//             movieContainer.innerHTML = cards;
 
-            // ketika tombol detail di klik
-            const modalDetailButton = document.querySelectorAll('.modal-detail-button');
-            modalDetailButton.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const imdbid = this.dataset.imdbid;
-                    fetch('http://www.omdbapi.com/?apikey=44b99a43&i=' + imdbid)
-                        .then(response => response.json())
-                        .then(m => {
-                            const moviewDetail = showMovieDetail(m);
-                            const modalBody = document.querySelector('.modal-body');
-                            modalBody.innerHTML = moviewDetail;
-                        });
-                });
-            }
-            );
-        });
+//             // ketika tombol detail di klik
+//             const modalDetailButton = document.querySelectorAll('.modal-detail-button');
+//             modalDetailButton.forEach(btn => {
+//                 btn.addEventListener('click', function () {
+//                     const imdbid = this.dataset.imdbid;
+//                     fetch('http://www.omdbapi.com/?apikey=44b99a43&i=' + imdbid)
+//                         .then(response => response.json())
+//                         .then(m => {
+//                             const moviewDetail = showMovieDetail(m);
+//                             const modalBody = document.querySelector('.modal-body');
+//                             modalBody.innerHTML = moviewDetail;
+//                         });
+//                 });
+//             }
+//             );
+//         });
+// });
+
+
+
+//* versi refactoring (asynchronous await)
+const searchButton = document.querySelector('.search-button');
+searchButton.addEventListener('click', async function () {
+    const inputKeyword = document.querySelector('.input-keyword'); 
+    const movies = await getMovies(inputKeyword.value);
+    updateUI(movies);
 });
 
+
+// event binding (ketika tombol detail di klik)
+document.addEventListener('click', async function (e) {
+    if (e.target.classList.contains('modal-detail-button')) {
+        const imdbid = e.target.dataset.imdbid;
+        const movieDetail = await getMoviesDetail(imdbid);
+        updateUIDetail(movieDetail);
+    }
+}); // event binding
+
+
+function getMoviesDetail(imdbid) {
+    return fetch('http://www.omdbapi.com/?apikey=44b99a43&i=' + imdbid)
+        .then(response => response.json())
+        .then(m => m);
+}
+
+
+function updateUIDetail(m) {
+    const moviewDetail = showMovieDetail(m);
+    const modalBody = document.querySelector('.modal-body');
+    modalBody.innerHTML = moviewDetail;
+}
+
+
+function getMovies(keyword) {
+    return fetch('http://www.omdbapi.com/?apikey=44b99a43&s=' + keyword)
+        .then(response => response.json())
+        .then(response => response.Search);
+};
+
+function updateUI(movies){
+    let cards = '';
+    movies.forEach(m => cards += showCards(m));
+    const movieContainer = document.querySelector('.movie-container');
+    movieContainer.innerHTML = cards;
+}
 
 
 function showCards(m) {
