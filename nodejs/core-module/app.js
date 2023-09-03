@@ -33,16 +33,17 @@ const rl = readline.createInterface({
 
 rl.question("Masukkan nama anda: ", (nama) => {
     rl.question("Masukkan no HP anda: ", (noHP) => {
-        const contact = { nama, noHP };
-        const file = fs.readFileSync("contacts.json", "utf-8");
-        const contacts = JSON.parse(file); //mengubah string menjadi objek javascript
+        rl.question("Masukkan hobi anda: ", (hobi) => {
+            const contact = { nama, noHP, hobi };
+            const file = fs.readFileSync("contacts.json", "utf-8");
+            const contacts = JSON.parse(file); //mengubah string menjadi objek javascript
 
-        contacts.push(contact);
+            contacts.push(contact);
 
-        fs.writeFileSync("contacts.json", JSON.stringify(contacts));
-        console.log("Terima Kasih sudah memasukkan data.");
-        rl.close();
-    });
+            fs.writeFileSync("contacts.json", JSON.stringify(contacts));
+            console.log("Terima Kasih sudah memasukkan data.");
+            rl.close();
+    });});
 }
 );
 
